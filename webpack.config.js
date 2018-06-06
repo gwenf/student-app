@@ -1,8 +1,9 @@
 const path = require('path');
-const SRC_DIR = path.join(__dirname, '/react-client/src');
-const DIST_DIR = path.join(__dirname, '/react-client/dist');
+const SRC_DIR = path.join(__dirname, '/src');
+const DIST_DIR = path.join(__dirname, '/dist');
 const webpack = require('webpack');
 module.exports = {
+    devtool: 'inline-source-map',
     entry: `${SRC_DIR}/index.jsx`,
     output: {
         path: DIST_DIR,
@@ -35,8 +36,8 @@ module.exports = {
         ]
     },
     plugins: [
-        new webpack.DefinePlugin({
-            'process.env.NODE_ENV': JSON.stringify('production')
-        })
+        // new webpack.DefinePlugin({
+        //     'process.env.NODE_ENV': JSON.stringify('production')
+        // })
     ]
 };

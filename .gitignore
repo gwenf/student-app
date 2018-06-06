@@ -5,6 +5,7 @@ logs
 # Compile Directory and file 
 build/
 build.js
+dist
 
 #Dependcy Directory
 node_modules/
